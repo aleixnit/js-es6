@@ -8,9 +8,14 @@ let paciente = {
     ultimaVisita: '4/4/2022 18: 32: 19'
 }
 
-// A) COPIA el paciente usando el operador de spread a un NUEVO objeto de nombre 'pacienteCopiado'; pero añade una nueva propiedad que se diga 'localidad'; y asignale cualquier valor
+let pacienteCopiado = {
+    ...paciente,
+    localidad: 'Barcelona',
+}
 
-// console.log(pacienteCopiado) ;
+// A) COPIA el paciente usando el operador de spread a un NUEVO objeto de nombre 'pacienteCopiado'; pero añade una nueva propiedad que se diga 'localidad'; y asignale cualquier valor
+console.log(pacienteCopiado) ;
+
 /**
  * {
     nombre: "Pedro",
@@ -35,7 +40,15 @@ let pacientes = [{
 
 // B) COPIA el array de pacientes Y AÑADE un nuevo paciente. USa el operador de 'spread' para realizar la copia, NO HAGAS PUSH. Guarda el array nuevo en una variable de nombre 'pacientesActualizados'
 
-// console.log(pacientesActualizados)
+let pacientesActualizados = {
+    ...pacientes.push({
+        nombre: "Olivia",
+        ultimaVisitaPagada: false,
+        ultimaVisita: '1/4/2021 18: 32: 19'
+    })
+}
+
+console.log(pacientesActualizados)
 
 /**
  * let pacientes = [{
